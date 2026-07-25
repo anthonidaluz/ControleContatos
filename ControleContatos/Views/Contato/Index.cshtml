@@ -1,4 +1,63 @@
 ﻿@{
     ViewData["Title"] = "Listagem de contatos";
 }
-<h1>Listagem de Contatos</h1>
+
+<div class="text-center">
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button">Adicionar novo contato</a>
+    </div>
+
+    <br />
+
+    <h1 class="display-4">Listagem de Contatos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Telefone</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Brenda Martins</td>
+                <td>contato@brenda.com.br</td>
+                <td>(49) 9979-0542</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-danger">Excluir</a>
+                        <a role="button" class="btn btn-warning">Editar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Emanuela</td>
+                <td>contato@emanuela.com.br</td>
+                <td>(49) 9923-2365</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-danger">Excluir</a>
+                        <a role="button" class="btn btn-warning">Editar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Maria Eduarda</td>
+                <td>contato@maria.com.br</td>
+                <td>(49) 9981-2342</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-danger">Excluir</a>
+                        <a role="button" class="btn btn-warning">Editar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
