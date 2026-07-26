@@ -1,7 +1,21 @@
+using ControleContatos.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// =========================================================================
+// CONFIGURAÇÃO DO BANCO DE DADOS (Entity Framework Core)
+// =========================================================================
+builder.Services.AddDbContext<BancoContext>(options =>
+{
+    // O nome "DataBase" tem que ser igual ao que está no appsettings.json
+    string connectionString = builder.Configuration.GetConnectionString("DB_Contatos");
+    options.UseSqlServer(connectionString);
+});
+// =========================================================================
 
 var app = builder.Build();
 
@@ -24,6 +38,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();
