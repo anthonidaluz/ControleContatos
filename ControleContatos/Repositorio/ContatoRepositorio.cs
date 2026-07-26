@@ -19,5 +19,10 @@ namespace ControleContatos.Repositorio
 
             return contato;
         }
+
+        public List<ContatoModel> BuscarTodos()
+        {
+            return _bancoContext.Contatos.ToList();
+        }
     }
 }
