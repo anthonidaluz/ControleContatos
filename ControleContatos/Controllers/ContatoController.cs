@@ -29,7 +29,7 @@ namespace ControleContatos.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {
             _contatoRepositorio.Adicionar(contato);
