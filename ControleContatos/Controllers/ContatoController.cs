@@ -28,9 +28,10 @@ namespace ControleContatos.Controllers
             ContatoModel contato = _contatoRepositorio.ListarPorId(id);
             return View(contato);
         }
-        public IActionResult ExcluirConfirmacao()
+        public IActionResult ExcluirConfirmacao(int id)
         {
-            return View();
+            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            return View(contato);
         }
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
@@ -46,5 +47,10 @@ namespace ControleContatos.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Apagar(int id)
+        {
+            _contatoRepositorio.Apagar(id);
+            return RedirectToAction("Index");
+        }
     }
 }

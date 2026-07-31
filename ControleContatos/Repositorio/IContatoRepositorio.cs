@@ -9,6 +9,8 @@ namespace ControleContatos.Repositorio
         ContatoModel Adicionar(ContatoModel contato);
         ContatoModel Atualizar(ContatoModel contato);
 
+        bool Apagar(int id);
+
 
     }
 }
