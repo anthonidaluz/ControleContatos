@@ -37,3 +37,17 @@ body {
     border-radius: 15px;
     height: 28px;
 }
+
+.header {
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-top: none;
+}
+
+.footer {
+    text-align: center;
+    background-color: ghostwhite;
+    color: black;
+    border-top: none;
+}
