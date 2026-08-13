@@ -38,11 +38,9 @@ body {
     height: 28px;
 }
 
-.header {
-    text-align: center;
-    background-color: green;
-    color: white;
-    border-top: none;
+
+.cabecalho-customizado {
+    background-color: ghostwhite !important;
 }
 
 .footer {
@@ -51,3 +49,7 @@ body {
     color: black;
     border-top: none;
 }
+
+    .footer a:hover {
+        color: gray;
+    }
